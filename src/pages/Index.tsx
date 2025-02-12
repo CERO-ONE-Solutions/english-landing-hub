@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -81,6 +80,46 @@ const Index = () => {
               <p className="text-gray-600">
                 Utilizamos recursos que se ajustan a tu progreso y objetivos de aprendizaje.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-white" id="about">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Sobre Nosotros
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                En EnglishPro, somos un equipo apasionado de profesores nativos y experimentados, dedicados a ayudarte a alcanzar tus metas con el idioma inglés.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                Con más de 10 años de experiencia en la enseñanza del inglés, hemos desarrollado métodos efectivos que se adaptan a las necesidades individuales de cada estudiante.
+              </p>
+              <ul className="space-y-4 text-gray-600">
+                <li className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-theme-600" />
+                  <span>Profesores nativos certificados</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Target className="h-5 w-5 text-theme-600" />
+                  <span>Metodología probada y efectiva</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-theme-600" />
+                  <span>Clases personalizadas a tu nivel</span>
+                </li>
+              </ul>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.png"
+                alt="Nuestro equipo"
+                className="rounded-lg shadow-xl w-full"
+              />
             </div>
           </div>
         </div>
