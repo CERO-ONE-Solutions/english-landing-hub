@@ -11,7 +11,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col justify-between items-center md:flex-row ">
             <div className="md:w-1/2 animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Domina el inglés con clases personalizadas
@@ -28,11 +28,11 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="md:w-1/2 mt-12 md:mt-0 animate-fade-in-slow">
+            <div className="mt-12 md:mt-0 animate-fade-in-slow">
               <img
                 src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.png"
                 alt="English Learning"
-                className="w-full rounded-lg shadow-xl"
+                className="w-96 "
               />
             </div>
           </div>
