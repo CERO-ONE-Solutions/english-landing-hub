@@ -30,7 +30,7 @@ const Index = () => {
             </div>
             <div className="mt-12 md:mt-0 animate-fade-in-slow">
               <img
-                src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.png"
+                src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.svg"
                 alt="English Learning"
                 className="w-96 "
               />
@@ -116,7 +116,7 @@ const Index = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.png"
+                src="/lovable-uploads/518fb0e6-1651-4ccd-b2b9-44d7b515e7e4.svg"
                 alt="Nuestro equipo"
                 className="rounded-lg shadow-xl w-full"
               />
