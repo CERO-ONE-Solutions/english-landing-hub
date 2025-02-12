@@ -1,9 +1,17 @@
 
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4">
@@ -27,10 +35,46 @@ const Navbar = () => {
             </Button>
           </div>
           
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-6 w-6" />
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobile && (
+          <div
+            className={`${
+              isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+            } md:hidden overflow-hidden transition-all duration-300 ease-in-out`}
+          >
+            <div className="py-4 space-y-4 px-4">
+              <a
+                href="#methods"
+                className="block text-gray-600 hover:text-theme-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Métodos
+              </a>
+              <a
+                href="#about"
+                className="block text-gray-600 hover:text-theme-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Nosotros
+              </a>
+              <a
+                href="#contact"
+                className="block text-gray-600 hover:text-theme-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contacto
+              </a>
+              <Button className="w-full bg-theme-600 hover:bg-theme-700 text-white">
+                Comenzar ahora
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
